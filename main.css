@@ -1,0 +1,90 @@
+body{
+    background-color: #cdcdcd;
+    overflow: hidden;
+}
+
+.panda{
+background-image: url(MegaJump.png);
+width: 192px;
+height: 288px;
+transform: translateY(407);
+animation: imag .5s steps(7) infinite, run 2s linear infinite;
+}
+
+.bird{
+    background-image: url(Birds.png);
+    height: 192px;
+    width: 192px;
+    animation: fly .5s steps(4) infinite, move 2s linear infinite;
+    margin-bottom: -280px;
+}
+
+.road{
+border: solid black;
+width: 1520px;
+transform: translateY(400px);
+}
+
+@keyframes imag {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 1344px;
+    }
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(-250px) translateY(407px);
+    }
+
+    14.29% {
+        transform: translateX(0px) translateY(307px);
+    }
+
+    28.57% {
+        transform: translateX(250px) translateY(407px);
+    }
+
+    42.86% {
+        transform: translateX(500px) translateY(307px);
+    }
+
+    57.14% {
+        transform: translateX(750px) translateY(407px);
+    }
+
+    71.43% {
+        transform: translateX(1000px) translateY(307px);
+    }
+
+    85.71% {
+        transform: translateX(1250px) translateY(407px);
+    }
+
+    100% {
+        transform: translateX(1500px) translateY(307px);
+    }
+}
+
+@keyframes fly{
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 768px;
+    }
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(1500px);
+    }
+
+    100%{
+        transform: translateX(-250px);
+    }
+}
